@@ -8,10 +8,16 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        Person customer = new Person();
-
-        System.out.print("Enter customer name: ");
+        System.out.print("Enter customers name: ");
         String name = scan.nextLine();
 
+        System.out.print("Enter customers age: ");
+        int age = scan.nextInt();
+
+    }
+    //Metod create customer
+    public static String createCostumer(String name, int age, String ticket ) {
+
+        return name + " " + age + " " + ticket;
     }
 }
