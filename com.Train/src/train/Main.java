@@ -11,13 +11,17 @@ public class Main {
         System.out.print("Enter customers name: ");
         String name = scan.nextLine();
 
+        System.out.print("Ticket or card: ");
+        String ticket = scan.nextLine();
+
         System.out.print("Enter customers age: ");
         int age = scan.nextInt();
 
+        System.out.println(createCostumer(name,age,ticket));
     }
     //Metod create customer
-    public static String createCostumer(String name, int age, String ticket ) {
+    public static String createCostumer(String name, int age, String ticket) {
 
-        return name + " " + age + " " + ticket;
+        return "Costumer: " + name + "\nAge: " + age + " \nTicket type: " + ticket;
     }
 }
