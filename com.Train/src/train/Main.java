@@ -7,9 +7,14 @@ public class Main {
     public static void main (String[] args) {
 
         Person newPerson = createCustomer();
+        Ticket ticket = new Ticket();
+
+        ticket.selectTicketType();
+        ticket.getTicketPrice(newPerson.getAge());
+
     }
     //Metod create customer
-    public static Person createCustomer() {
+    public static Person createCustomer () {
 
         Scanner scan = new Scanner(System.in);
 
