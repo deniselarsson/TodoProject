@@ -2,7 +2,7 @@ package train;
 
 import java.util.Scanner;
 
-import static train.Person.createCustomer;
+import static train.Main.createCustomer;
 
 public class Ticket {
 
@@ -11,7 +11,7 @@ public class Ticket {
 
     Person person = createCustomer();
 
-    public void selectTicketType () {
+    public int selectTicketType () {
 
         Scanner scan = new Scanner(System.in);
 
@@ -19,13 +19,14 @@ public class Ticket {
         int input = scan.nextInt();
 
         if (input == CARD) {
-            System.out.println(getCardPrice(person.getAge()));
+            return getCardPrice(person.getAge());
         }
         else if (input == TICKET) {
-            System.out.println(getTicketPrice(person.getAge()));
         }
+        return getTicketPrice(person.getAge());
     }
 
+    //Hämtar pris för en biljett utifrån åldern
     public int getTicketPrice (int age) {
 
         if (age < 18 || age >= 65) {
@@ -36,6 +37,7 @@ public class Ticket {
         }
     }
 
+    //Hämtar pris för en månadskort utifrån åldern
     public int getCardPrice (int age) {
 
         if (age < 18 || age >= 65) {
