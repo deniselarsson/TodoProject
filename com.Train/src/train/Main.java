@@ -1,20 +1,24 @@
 package train;
 
-import javax.xml.namespace.QName;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
+    static ArrayList<Ticket> tickets = new ArrayList<>();
+
     public static void main (String[] args) {
 
-        Person person = createCustomer();
-        TicketType ticketType = selectTicketType();
+        while (true) {
+            Person person = createCustomer();
+            TicketType ticketType = selectTicketType();
+            Ticket ticket = new Ticket(person, ticketType);
 
-        Ticket ticket = new Ticket(person, ticketType);
+            tickets.add(ticket);
+            System.out.println(ticket.getTicketPrice() + " kr");
 
-
-        System.out.println();
-
+            printNames(tickets);
+        }
     }
     //Metod create customer
     public static Person createCustomer () {
@@ -41,6 +45,13 @@ public class Main {
         }
         else {
             return TicketType.MONTH;
+        }
+    }
+
+    public static void printNames(ArrayList<Ticket>tickets){
+
+        for (Ticket ticket:tickets) {
+            System.out.print(ticket.person.getName());
         }
     }
 }

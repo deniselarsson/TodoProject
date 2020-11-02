@@ -15,16 +15,16 @@ public class Ticket {
     //Hämtar pris för en biljett utifrån åldern
     public int getTicketPrice () {
 
-        if (person.getAge() < 18 || person.getAge() >= 65) {
-            return 20;
+        if (this.ticketType == TicketType.DAY) {
+            return getDayPrice();
         }
         else {
-            return 35;
+            return getMonthPrice();
         }
     }
 
     //Hämtar pris för en månadskort utifrån åldern
-    public int getMonthPrice () {
+    private int getMonthPrice () {
 
         if ( person.getAge()< 18 || person.getAge() >= 65) {
             return 450;
