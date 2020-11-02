@@ -2,10 +2,14 @@ package train;
 
 import java.util.Scanner;
 
+import static train.Person.createCustomer;
+
 public class Ticket {
 
     final int CARD = 2;
     final int TICKET = 1;
+
+    Person person = createCustomer();
 
     public void selectTicketType () {
 
@@ -15,39 +19,30 @@ public class Ticket {
         int input = scan.nextInt();
 
         if (input == CARD) {
-            System.out.println("30 days ticket is selected, your input was: " + CARD);
+            System.out.println(getCardPrice(person.getAge()));
         }
-        else if (input == TICKET){
-            System.out.println("One day ticket is selected, your input was: " + TICKET);
-        }
-        else {
-            System.out.println("Not valid number, try again!");
+        else if (input == TICKET) {
+            System.out.println(getTicketPrice(person.getAge()));
         }
     }
 
-    public  int getTicketPrice (int age) {
+    public int getTicketPrice (int age) {
 
         if (age < 18 || age >= 65) {
-            System.out.println("The price is 20 kr.");
+            return 20;
         }
         else {
-            System.out.println("The price is 35 kr ");
+            return 35;
         }
-        return age;
     }
 
-    public static int getCardPrice (int age) {
+    public int getCardPrice (int age) {
 
         if (age < 18 || age >= 65) {
-            System.out.println("The price is 450 kr.");
+            return 450;
         }
         else {
-            System.out.println("The price is 600 kr");
+            return 600;
         }
-        return age;
-
-
-
-
     }
 }
