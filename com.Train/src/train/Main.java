@@ -10,14 +10,18 @@ public class Main {
     public static void main (String[] args) {
 
         while (true) {
-            Person person = createCustomer();
-            TicketType ticketType = selectTicketType();
-            Ticket ticket = new Ticket(person, ticketType);
 
-            tickets.add(ticket);
-            System.out.println(ticket.getTicketPrice() + " kr");
+            Scanner scan = new Scanner(System.in);
 
-            printNames(tickets);
+            System.out.print("Sell ticket enter 1, print names enter 2: ");
+            int input = scan.nextInt();
+
+            if (input == 1) {
+                sellTicket();
+            }
+            else {
+                printNames(tickets);
+            }
         }
     }
     //Metod create customer
@@ -33,6 +37,7 @@ public class Main {
         return new Person(name, age);
 
     }
+    //Väljer antingen biljett eller måndadskort
     public static TicketType selectTicketType () {
 
         Scanner scan = new Scanner(System.in);
@@ -48,10 +53,22 @@ public class Main {
         }
     }
 
-    public static void printNames(ArrayList<Ticket>tickets){
+    //Få ut en lista på alla resenärer
+    public static void printNames (ArrayList<Ticket> tickets) {
 
-        for (Ticket ticket:tickets) {
-            System.out.print(ticket.person.getName());
+        for (Ticket ticket : tickets) {
+            System.out.println(ticket.person.getName());
         }
+    }
+
+    //Hur mycket personen ska betala utifrån åldern
+    public static void sellTicket () {
+
+        Person person = createCustomer();
+        TicketType ticketType = selectTicketType();
+        Ticket ticket = new Ticket(person, ticketType);
+
+        tickets.add(ticket);
+        System.out.println(ticket.getTicketPrice() + " kr");
     }
 }

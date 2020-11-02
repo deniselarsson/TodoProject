@@ -1,6 +1,5 @@
 package train;
 
-
 public class Person {
 
     private String name;

@@ -1,18 +1,16 @@
 package train;
 
-
 public class Ticket {
 
     Person person;
     TicketType ticketType;
 
-    Ticket(Person person, TicketType ticketType){
+    Ticket (Person person, TicketType ticketType) {
         this.person = person;
         this.ticketType = ticketType;
     }
 
-
-    //Hämtar pris för en biljett utifrån åldern
+    //Hämtar pris för antingen biljett eller månadskort
     public int getTicketPrice () {
 
         if (this.ticketType == TicketType.DAY) {
@@ -26,14 +24,16 @@ public class Ticket {
     //Hämtar pris för en månadskort utifrån åldern
     private int getMonthPrice () {
 
-        if ( person.getAge()< 18 || person.getAge() >= 65) {
+        if (person.getAge() < 18 || person.getAge() >= 65) {
             return 450;
         }
         else {
             return 600;
         }
     }
-    private int getDayPrice(){
+
+    //Hämtar pris för en biljett utifrån ålderm
+    private int getDayPrice () {
 
         if (person.getAge() < 18 || person.getAge() >= 65) {
             return 20;
