@@ -1,7 +1,6 @@
 package train;
 
 import java.util.Scanner;
-
 import static train.Main.tickets;
 import static train.Person.createCustomer;
 
