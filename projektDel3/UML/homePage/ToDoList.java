@@ -1,4 +1,4 @@
-package homePage;
+package UML.homePage;
 
 import java.util.Scanner;
 
