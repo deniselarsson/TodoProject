@@ -1,5 +1,6 @@
 package train;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Person {
@@ -31,5 +32,12 @@ public class Person {
         System.out.print("Enter customers age: ");
         int age = scan.nextInt();
         return new Person(name, age);
+    }
+
+    public static void printNames (ArrayList<Ticket> tickets) {
+
+        for (Ticket ticket : tickets) {
+            System.out.println(ticket.person.getName()+ "\n");
+        }
     }
 }

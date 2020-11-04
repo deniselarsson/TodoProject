@@ -3,6 +3,7 @@ package train;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static train.Person.printNames;
 import static train.Ticket.sellTicket;
 
 public class Main {
@@ -23,14 +24,8 @@ public class Main {
             }
             else {
                 System.out.println("\n" + "**********LIST OF PASSENGERS**********");
-                printNames( tickets);
+                printNames(tickets);
             }
-        }
-    }
-    public static void printNames (ArrayList<Ticket> tickets) {
-
-        for (Ticket ticket : tickets) {
-            System.out.println(ticket.person.getName()+ "\n");
         }
     }
 }
