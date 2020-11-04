@@ -22,14 +22,15 @@ public class Main {
                 sellTicket();
             }
             else {
-                printNames(tickets);
+                System.out.println("\n" + "**********LIST OF PASSENGERS**********");
+                printNames( tickets);
             }
         }
     }
     public static void printNames (ArrayList<Ticket> tickets) {
 
         for (Ticket ticket : tickets) {
-            System.out.println(ticket.person.getName());
+            System.out.println(ticket.person.getName()+ "\n");
         }
     }
 }
