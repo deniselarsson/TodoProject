@@ -31,6 +31,5 @@ public class Person {
         System.out.print("Enter customers age: ");
         int age = scan.nextInt();
         return new Person(name, age);
-
     }
 }

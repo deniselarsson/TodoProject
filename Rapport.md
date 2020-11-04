@@ -2,13 +2,20 @@
 
 ####Textual Analysis
 
+
 ####Kandidater
 
-#####Objekt: #####Metoder: #####Variaber: #####Aktörer:
+#####Objekt: 
+#####Metoder: 
+#####Variaber: 
+#####Aktörer:
 
 ####Vilka av kandidaterna som blev vad:
 
-#####Objekt: #####Metoder: #####Variaber: #####Aktörer:
+#####Objekt: 
+#####Metoder: 
+#####Variaber: 
+#####Aktörer:
 
 #####Motivering av objekt (endast objekten ska motiveras): Vi valde dessa objekt för att...
 
