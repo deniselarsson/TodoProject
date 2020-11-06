@@ -2,15 +2,15 @@ package train;
 
 import java.util.Scanner;
 import static train.Main.tickets;
-import static train.Person.createCustomer;
+import static train.Customer.createCustomer;
 
 public class Ticket {
 
-    Person person;
+    Customer customer;
     TicketType ticketType;
 
-    Ticket (Person person, TicketType ticketType) {
-        this.person = person;
+    Ticket (Customer customer, TicketType ticketType) {
+        this.customer = customer;
         this.ticketType = ticketType;
     }
 
@@ -28,7 +28,7 @@ public class Ticket {
     //Hämtar pris för en månadskort utifrån åldern
     private int getMonthPrice () {
 
-        if (person.getAge() < 18 || person.getAge() >= 65) {
+        if (customer.getAge() < 18 || customer.getAge() >= 65) {
             return 450;
         }
         else {
@@ -39,7 +39,7 @@ public class Ticket {
     //Hämtar pris för en biljett utifrån ålderm
     private int getDayPrice () {
 
-        if (person.getAge() < 18 || person.getAge() >= 65) {
+        if (customer.getAge() < 18 || customer.getAge() >= 65) {
             return 20;
         }
         else {
@@ -64,11 +64,12 @@ public class Ticket {
     }
 
     //Hur mycket personen ska betala utifrån åldern
+    //Ticket has a customer
     public static void sellTicket () {
 
-        Person person = createCustomer();
+        Customer customer = createCustomer();
         TicketType ticketType = selectTicketType();
-        Ticket ticket = new Ticket(person, ticketType);
+        Ticket ticket = new Ticket(customer, ticketType);
 
         tickets.add(ticket);
         System.out.println(ticket.getTicketPrice() + " kr");

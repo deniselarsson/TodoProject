@@ -1,12 +1,12 @@
 ###Grupp3Projekt Del 3
 
 ####Textual Analysis: 
-Vi vill sälja biljett, vi vill sälja månadskort, spara namn, skriva ut namn/lista, hur mycket en person ska betala utifrån åldern, mata in värden.
+Vi vill sälja biljett, vi vill sälja månadskort, spara namn, skriva ut namn/lista, hur mycket en customer ska betala utifrån åldern, mata in värden.
 
 ####Kandidater: 
-Konduktör, person, biljett, scanner klass som  tar in värden, namn, ålder, biljett, månadskort, resenär input, skriva ut en lista , sälja biljett/månadskort, spara namn(lista), spara ålder, verifiera ålder
+Konduktör, customer, biljett, scanner klass som  tar in värden, namn, ålder, biljett, månadskort, resenär input, skriva ut en lista , sälja biljett/månadskort, spara namn(lista), spara ålder, verifiera ålder
 
-#####Objekt: Konduktör, person, biljett
+#####Objekt: Konduktör, customer, biljett
 
 #####Metoder: scanner klass som  tar in värden, biljett, månadskort, resenär input, skriva ut en lista , sälja biljett/månadskort, spara namn(lista), spara ålder, verifiera ålder
 
@@ -26,7 +26,7 @@ Person, biljett, biljett typ: blev våra klasser.
 printNames () createCustomer() getTicketPrice() getMonthPrice() getDayPrice() selectTicketType() sellTicket()
 
 #####Variaber: 
-Person person; TicketType ticketType; String name; int age; enum DAY; enum MONTH;
+Person customer; TicketType ticketType; String name; int age; enum DAY; enum MONTH;
 
 #####Aktörer: Konduktören
 

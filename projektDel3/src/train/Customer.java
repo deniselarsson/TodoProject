@@ -3,12 +3,12 @@ package train;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Person {
+public class Customer {
 
     private String name;
     private int age;
 
-    Person (String name, int age) {
+    Customer (String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -22,7 +22,7 @@ public class Person {
     }
 
     ///Metod create customer
-    public static Person createCustomer () {
+    public static Customer createCustomer () {
 
         Scanner scan = new Scanner(System.in);
 
@@ -31,13 +31,13 @@ public class Person {
 
         System.out.print("Enter customers age: ");
         int age = scan.nextInt();
-        return new Person(name, age);
+        return new Customer(name, age);
     }
 
     public static void printNames (ArrayList<Ticket> tickets) {
 
         for (Ticket ticket : tickets) {
-            System.out.println(ticket.person.getName()+ "\n");
+            System.out.println(ticket.customer.getName()+ "\n");
         }
     }
 }
