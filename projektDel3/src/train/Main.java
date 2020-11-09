@@ -22,7 +22,6 @@ public class Main {
             if (input == 1) {
                 sellTicket();
             }
-            //else if
             else if (input==2){
                 System.out.println("\n" + "**********LIST OF PASSENGERS**********");
                 printNames(tickets);
