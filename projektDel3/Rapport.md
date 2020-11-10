@@ -27,7 +27,7 @@ Costumer, ticket, ticketType: blev våra klasser.
 #####Objekt: Scanner, Ticket
 
 ####Metoder:
-printNames () createCustomer() getTicketPrice() getMonthPrice() getDayPrice() selectTicketType() sellTicket()
+printNames () createCustomer() ticketPrice() validateMonthPrice() validateDayPrice() selectTicketType() sellTicket()
 
 #####Variaber: 
 Costumer costumer; TicketType ticketType; String name; int age; enum DAY; enum MONTH;
@@ -35,7 +35,7 @@ Costumer costumer; TicketType ticketType; String name; int age; enum DAY; enum M
 #####Aktörer: Konduktören
 
 #####Motivering av objekt : 
-Vi valde Scanner för att användaren ska kunna mata in input och att vi kan skriva ut text.
+Vi valde Scanner för att användaren ska kunna mata in input och att vi kan skriva ut text. Vi gjorde ett objekt av klassen “Ticket” för att kunna spara namn, tickettype och skapa en kund.
 
 ####Daglogg
 #####29/10/2020:Idag har Denisé och Klara gjort vår första textanalys med att välja ut olika kandidater.
@@ -49,6 +49,8 @@ Vi valde Scanner för att användaren ska kunna mata in input och att vi kan skr
 #####4/11/2020: Idag har Peter, Klara och Denisé ändrat UML diagrammet, färdigställt koden, arbetat med rapporten 
 
 #####9/11/2020: Idag har vi tre uppdaterat vår rapport och UML diagrammet samt förberett inför presentationen.
+
+#####10/11/2020: Idag har vi uppdaterat UML, ändrat namn på några metoder och visat Sandra vår kod. 
 
 #####På vilket sätt har ni använt er av Objektorentering? 
 Vi har använt oss av objektorientering genom att använda oss av 3 olika klasser vars objekt interagerar med varandra,

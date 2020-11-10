@@ -15,18 +15,18 @@ public class Ticket {
     }
 
     //Hämtar pris för antingen biljett eller månadskort
-    public int getTicketPrice () {
+    public int ticketPrice () {
 
         if (this.ticketType == TicketType.DAY) {
-            return getDayPrice();
+            return validateDayPrice();
         }
         else {
-            return getMonthPrice();
+            return validateMonthPrice();
         }
     }
 
     //Hämtar pris för en månadskort utifrån åldern
-    private int getMonthPrice () {
+    private int validateMonthPrice () {
 
         if (customer.getAge() < 18 || customer.getAge() >= 65) {
             return 450;
@@ -37,7 +37,7 @@ public class Ticket {
     }
 
     //Hämtar pris för en biljett utifrån ålderm
-    private int getDayPrice () {
+    private int validateDayPrice () {
 
         if (customer.getAge() < 18 || customer.getAge() >= 65) {
             return 20;
@@ -72,6 +72,6 @@ public class Ticket {
         Ticket ticket = new Ticket(customer, ticketType);
 
         tickets.add(ticket);
-        System.out.println(ticket.getTicketPrice() + " kr");
+        System.out.println(ticket.ticketPrice() + " kr");
     }
 }
