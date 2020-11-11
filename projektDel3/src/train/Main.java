@@ -16,7 +16,7 @@ public class Main {
 
             Scanner scan = new Scanner(System.in);
 
-            System.out.print("Sell ticket enter 1, print names enter 2: ");
+            System.out.print("\n" + "Sell ticket enter 1, print names enter 2: ");
             int input = scan.nextInt();
 
             if (input == 1) {

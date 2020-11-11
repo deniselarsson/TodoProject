@@ -37,7 +37,7 @@ public class Customer {
     public static void printNames (ArrayList<Ticket> tickets) {
 
         for (Ticket ticket : tickets) {
-            System.out.println(ticket.customer.getName()+ "\n");
+            System.out.println(ticket.customer.getName());
         }
     }
 }
